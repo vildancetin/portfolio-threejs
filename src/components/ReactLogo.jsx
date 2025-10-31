@@ -14,7 +14,7 @@ const ReactLogo=(props) =>{
   return (
     // automatically floating on the space
     <Float  floatIntensity={1}>
-      <group scale={0.3} {...props} position={[8,5,3]} dispose={null}>
+      <group scale={0.4}  position={[8,5,3]} {...props} dispose={null}>
         <mesh
           geometry={nodes['React-Logo_Material002_0'].geometry}
           material={materials['Material.002']}

@@ -7,11 +7,11 @@ import ReactLogo from '../components/ReactLogo.jsx'
 import { Leva } from 'leva'
 import { useMediaQuery } from 'react-responsive'
 import { calculateSizes } from '../constants/index.js'
-import Target from '../components/Target.jsx'
 import Cube from '../components/Cube.jsx'
 import Ring from '../components/Ring.jsx'
 import HeroCamera from '../components/HeroCamera.jsx'
 import Button from '../components/Button.jsx'
+import TargetWrapper from '../components/TargetWrapper.jsx'
 const Hero = () => {
   // We dont need anymore leva.
 /*   const x = useControls("HackerRoom",{
@@ -62,7 +62,7 @@ const Hero = () => {
                 />
                 </HeroCamera>
                 <group>
-                  <Target position={sizes.targetPosition}/>
+                  <TargetWrapper position={sizes.targetPosition}/>
                   <ReactLogo position={sizes.reactLogoPosition}/>
                   <Cube position={sizes.cubePosition} />
                   <Ring position={sizes.ringPosition}/>

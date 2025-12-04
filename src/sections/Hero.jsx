@@ -12,6 +12,10 @@ import Ring from '../components/Ring.jsx'
 import HeroCamera from '../components/HeroCamera.jsx'
 import Button from '../components/Button.jsx'
 import TargetWrapper from '../components/TargetWrapper.jsx'
+import Desk from '../components/Desk.jsx'
+import Laptop from '../components/Macbook.jsx'
+import Developer from '../components/Developer.jsx'
+import SpotifyIcon from '../components/SpotifyIcon.jsx'
 const Hero = () => {
   // We dont need anymore leva.
 /*   const x = useControls("HackerRoom",{
@@ -33,7 +37,7 @@ const Hero = () => {
     <section className='min-h-screen w-full flex flex-col relative'>
         <div className='w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3'>
             <p className='sm-text-3xl text-2xl font-medium text-white text-center font-generalsans'> Hi, I am Vildan <span className='waving-hand'>👋</span></p>
-            <p className='hero_tag text-gray_gradient'>Building Products & Brands</p>
+            <p className='hero_tag text-gray_gradient'>Designing & Building Products</p>
         </div>
         <div className='w-full h-full absolute inset-0'>
           <Leva/>
@@ -41,9 +45,11 @@ const Hero = () => {
                 <Suspense fallback={<CanvasLoader/>}>
 
                 <PerspectiveCamera makeDefault position={[0,0,20]}></PerspectiveCamera>
+                <ambientLight intensity={2}/> // everything light
+                <directionalLight position={[10,10,6]} intensity={0.5}/> // one direction light
                 <HeroCamera isMobile={isMobile}>
 
-                <HackerRoom 
+{/*                 <HackerRoom 
 /*                scale={0.07} 
                 position={[0,0,0]} 
                 rotation={[0,280,0]} 
@@ -56,19 +62,27 @@ const Hero = () => {
 /*                 position={[2,-8,2]}
                 rotation={[0,Math.PI,0]}
                 scale={isMobile ? 0.07 : 0.1} */
-                position={sizes.deskPosition}
+/*                 position={sizes.deskPosition}
                 scale={sizes.deskScale}
                 rotation={[0,Math.PI,0]}
-                />
+                /> */} */
+{/*                 <Desk   
+                 position={[-80, -35, -100]}
+                 rotation={[Math.PI / 12, Math.PI/4, 0]}
+                 scale={sizes.deskScale}
+                /> */}
+                <Developer animationName='greeting' position={sizes.developerPosition} scale={sizes.developerScale}  rotation={[0,-Math.PI/4,0]} />
                 </HeroCamera>
                 <group>
-                  <TargetWrapper position={sizes.targetPosition}/>
-                  <ReactLogo position={sizes.reactLogoPosition}/>
-                  <Cube position={sizes.cubePosition} />
-                  <Ring position={sizes.ringPosition}/>
+               <TargetWrapper position={sizes.macbookPosition} scale={sizes.macbookScale}/> 
+                  <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactScale}/>
+{/*                   <Laptop position={sizes.macbookPosition} scale={sizes.macbookScale}/> */}
+{/*                   <Cube position={sizes.cubePosition} /> */}
+<SpotifyIcon position={sizes.spotifyPosition} scale={sizes.spotifyScale}/>
+                  <Ring position={sizes.ringPosition} scale={sizes.ringScale}/>
                 </group>
-                <ambientLight intensity={1}/>
-                <directionalLight position={[10,10,10]} intensity={0.5}/>
+
+                
                 </Suspense>
             </Canvas>
         </div>

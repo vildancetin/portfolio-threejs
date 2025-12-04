@@ -32,8 +32,8 @@ const Projects = () => {
             <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
           </div>
 
-          <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
+          <div className="flex flex-col gap-5 text-white-700 my-5">
+            <p className="text-gray-300 text-2xl font-semibold animatedText">{currentProject.title}</p>
 
             <p className="animatedText">{currentProject.desc}</p>
             <p className="animatedText">{currentProject.subdesc}</p>
@@ -67,7 +67,7 @@ const Projects = () => {
             </button>
           </div>
             </div>
-             <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+             <div className="border-pink-100/30 bg-pink-100/30 backdrop-blur-md rounded-lg h-96 md:h-full">
           <Canvas>
             <ambientLight intensity={Math.PI} />
             <directionalLight position={[10, 10, 5]} />

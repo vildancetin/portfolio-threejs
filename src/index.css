@@ -9,15 +9,18 @@
 }
 
 body {
-  background: #010103;
-  font-family: 'General Sans', sans-serif;
+background: #464699;
+background: linear-gradient(-95deg, rgba(70, 70, 153, 1) 28%, rgba(48, 126, 171, 1) 66%, rgba(153, 60, 136, 1) 100%);
+font-family: 'General Sans', sans-serif;
 }
 
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;
   }
-
+  .nav-bg{
+    @apply
+  }
   .head-text {
     @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
   }
@@ -31,7 +34,7 @@ body {
   }
 
   .nav-li_a {
-    @apply text-lg md:text-base hover:text-white transition-colors;
+    @apply text-xl md:text-base hover:text-white transition-colors;
   }
 
   .nav-sidebar {
@@ -57,12 +60,12 @@ body {
 
   /* hero section */
   .hero_tag {
-    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal;
+    @apply text-center xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl font-generalsans font-black !leading-normal;
   }
 
   /* about section */
   .grid-container {
-    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    @apply w-full h-full border border-white/10 bg-pink-100/30 backdrop-blur-md rounded-lg sm:p-7 p-4 flex flex-col gap-5 shadow-lg  shadow-black/30 ;
   }
 
   .grid-headtext {
@@ -70,7 +73,7 @@ body {
   }
 
   .grid-subtext {
-    @apply text-[#afb0b6] text-base font-generalsans;
+    @apply text-[#292727] text-base font-generalsans font-medium;
   }
 
   .copy-container {
@@ -105,19 +108,19 @@ body {
   }
 
   .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 rounded-lg bg-pink-100/30 backdrop-blur-md border border-pink-100/30;
   }
 
   .work-content {
-    @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-2 rounded-lg bg-pink-100/30 backdrop-blur-md border border-pink-100/30;
   }
 
   .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
+    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-gray-600/40  rounded-lg sm:px-5 px-2.5;
   }
 
   .work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
+    @apply rounded-3xl w-16 h-16 p-2 bg-gray-100/30;
   }
 
   .work-content_bar {
@@ -126,7 +129,7 @@ body {
 
   /* contact section */
   .contact-container {
-    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12;
+    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12 py-12;
   }
 
   .field-label {

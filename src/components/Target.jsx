@@ -6,10 +6,10 @@ Source: https://sketchfab.com/3d-models/target-26d9025cc9ba4377a343ea8d8a153100
 Title: Target
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Target(props) {
+const Target=(props) =>{
   const { nodes, materials } = useGLTF('models/target.glb')
   return (
     <group {...props} dispose={null}>

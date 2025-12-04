@@ -13,19 +13,20 @@ const Developer=({animationName="idle",...props}) =>{
   const { scene } = useGLTF('/models/animations/developer.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
-
+//upload animatons
   const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
   const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
   const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
   const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
-
+const {animations:greetinAnimation}=useFBX('/models/animations/greeting.fbx')
   idleAnimation[0].name = 'idle';
   saluteAnimation[0].name = 'salute';
   clappingAnimation[0].name = 'clapping';
   victoryAnimation[0].name = 'victory';
+  greetinAnimation[0].name='greeting'
 
   const { actions } = useAnimations(
-    [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
+    [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0],greetinAnimation[0]],
     group,
   );
 

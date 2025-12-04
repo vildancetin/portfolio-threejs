@@ -2,14 +2,15 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import TargetModel from './Target' 
+import Target from './Target'
+import Laptop from './Macbook'
 
 const TargetWrapper = (props) => {
   const ref = useRef()
 
   useGSAP(() => {
     gsap.to(ref.current.position, {
-      y: ref.current.position.y + 0.5,
+      z: ref.current.position.z + 1,
       duration: 1.5,
       repeat: -1,
       yoyo: true,
@@ -18,7 +19,7 @@ const TargetWrapper = (props) => {
 
   return (
     <group ref={ref} {...props}>
-      <TargetModel />
+      <Laptop />
     </group>
   )
 }

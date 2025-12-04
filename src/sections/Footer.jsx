@@ -27,7 +27,7 @@ const Footer = () => {
 
       </div>
 
-      <p className="text-white-500">© 2024 Adrian Hajdin. All rights reserved.</p>
+      <p className="text-white-500">© 2025 Vildan Beyza Cetin. All rights reserved.</p>
     </footer>
   );
 };

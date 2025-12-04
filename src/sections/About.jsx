@@ -22,6 +22,13 @@ const About = () => {
                         <p className='grid-headtext'>Hi,I'm Vildan</p>
                         <p className='grid-subtext'>Hi, I’m Vildan, a FullStack Developer passionate about creating visually appealing and user-friendly web applications. I enjoy working on both the frontend and backend, building features that are functional, efficient, and modern.
 </p>
+                    <a
+                    href="/cv/fullstack-cv.pdf"
+                    download="Vildan-CV.pdf"
+                    className="bg-black-300 px-3 py-2 rounded-md text-white text-sm inline-block active:scale-95 mt-6 hover:bg-pink-100/20 transition-all hover:text-black-200"
+                    >
+                      Download cv
+                    </a>
                     </div>
                 </div>
             </div>
@@ -56,7 +63,9 @@ const About = () => {
                  <div>
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
               <p className="grid-subtext">I&apos;m based in Istanbul,Türkiye and open to remote work worldwide.</p>
+               <a href='#contact' className='w-fit'>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+               </a>
             </div>
                 </div>
             </div>

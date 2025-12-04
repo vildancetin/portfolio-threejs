@@ -22,6 +22,7 @@ const About = () => {
                         <p className='grid-headtext'>Hi,I'm Vildan</p>
                         <p className='grid-subtext'>Hi, I’m Vildan, a FullStack Developer passionate about creating visually appealing and user-friendly web applications. I enjoy working on both the frontend and backend, building features that are functional, efficient, and modern.
 </p>
+                  <div className='flex justify-between'>
                     <a
                     href="/cv/fullstack-cv.pdf"
                     download="Vildan-CV.pdf"
@@ -29,6 +30,13 @@ const About = () => {
                     >
                       Download cv
                     </a>
+                     <a
+                    href="#footer"
+                    className="bg-black-300 px-3 py-2 rounded-md text-white text-sm inline-block active:scale-95 mt-6 hover:bg-pink-100/20 transition-all hover:text-black-200"
+                    >
+                      Social accounts
+                    </a>
+                    </div>
                     </div>
                 </div>
             </div>
